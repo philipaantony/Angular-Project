@@ -1,0 +1,16 @@
+<p>home works!</p>
+<div class="container">  
+    <div class="form-group">  
+      <label>  
+        Email:  
+      </label>  
+      <input type="text"  [(ngModel)]="email" />  
+    </div>  
+    <div class="form-group">  
+      <button (click)="updateEmail()" class="btn btn-dark">Update Email</button>  
+    </div>  
+    <p>
+        Value: {{ email }} <!-- Removed .value from here -->
+      </p>
+       
+  </div>

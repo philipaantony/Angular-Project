@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2>Two-way Binding Example</h2>
+      <input [(ngModel)]="count"type="number" placeholder="Enter a number" />
+      <br /><br />
+      <button (click)="checkevenorodd()" class="btn btn-dark">Submit</button>
+
+      <!-- Card to display submitted values -->
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Count is {{count}}</h5>
+          <div [hidden]= "is_hidden">
+            <h5  class="card-title">The Number is : {{result}}</h5>
+            <button (click)="clear()" class="btn btn-success">Clear</button>
+
+          </div>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
