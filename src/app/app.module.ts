@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';  
+import { ReactiveFormsModule } from '@angular/forms';
+
+ 
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +15,10 @@ import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component'
 import { TableComponent } from './table/table.component';
 import { MyusersComponent } from './myusers/myusers.component';
 import { PlaceholderdataComponent } from './placeholderdata/placeholderdata.component';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
+import { RelativeformComponent } from './relativeform/relativeform.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,14 +29,18 @@ import { PlaceholderdataComponent } from './placeholderdata/placeholderdata.comp
     TwowaybindingComponent,
     TableComponent,
     MyusersComponent,
-    PlaceholderdataComponent
+    PlaceholderdataComponent,
+    TemplatedrivenComponent,
+    RelativeformComponent,
+   
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule ,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

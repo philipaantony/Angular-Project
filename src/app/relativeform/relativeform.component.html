@@ -1,0 +1,56 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Enter Your Information</h5>
+            <form [formGroup]="registerdata" (ngSubmit)="onSubmit()" id="myForm">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" formControlName="firstname" [ngClass]="{'is-invalid': submit && registerdata.controls.firstname.errors}" class="form-control" id="firstName" placeholder="First Name" required>
+                <div *ngIf="submit && f.firstname.errors?.['required']" class="invalid-feedback">
+                  First Name is required
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" formControlName="lastname" [ngClass]="{'is-invalid': submit && registerdata.controls.lastname.errors}" class="form-control" id="lastName" placeholder="Last Name" required>
+                <div *ngIf="submit && f.lastname.errors?.['required']" class="invalid-feedback">
+                  Last Name is required
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" formControlName="phone" [ngClass]="{'is-invalid': submit && f.phone.errors}" class="form-control" id="phone" placeholder="Your Phone number" required>
+                <div *ngIf="submit && f.phone.errors?.['required']" class="invalid-feedback">
+                  Phone number is required
+                </div>
+                <div *ngIf="submit && f.phone.errors?.['pattern']" class="invalid-feedback">
+                  Phone number is invalid. Please enter in the format xxx-xxx-xxxx.
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" formControlName="email" [ngClass]="{'is-invalid': submit && f.email.errors}" class="form-control" placeholder="Your Email" id="email" required>
+                <div *ngIf="submit && f.email.errors?.['required']" class="invalid-feedback">
+                  Email is required
+                </div>
+                <!-- Uncomment below if you want to show error message for invalid email format -->
+                <div *ngIf="submit && f.email.errors?.['email']" class="invalid-feedback">
+                  Email is invalid
+                </div>
+              </div>
+  
+              <br>
+              <button style="margin-right: 20px;" type="submit" class="btn btn-danger">Submit</button>
+              <button type="reset" class="btn btn-secondary ml-2">Reset</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

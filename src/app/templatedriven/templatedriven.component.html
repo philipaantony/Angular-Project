@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="card" style="max-width: 400px; margin: 0 auto;">
+        <div class="card-body">
+            <h5 class="card-title">Registration Form</h5>
+            <form #form="ngForm" (ngSubmit)="form.valid && onSubmit()">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" 
+                        name="firstname"
+                        required
+                        #firstName="ngModel"
+                        [(ngModel)]="data.fName"
+                        class="form-control"  placeholder="Enter First Name">
+                    <label *ngIf="form.submitted && firstName.invalid && (firstName.dirty || firstName.touched)"
+                        class="text-danger">First name is required</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text"
+                        name="lastname"
+                        required
+                        #lastName="ngModel"
+                        [(ngModel)]="data.lname"
+                        class="form-control" placeholder="Enter Last Name">
+                    <label *ngIf="form.submitted && lastName.invalid && (lastName.dirty || lastName.touched)"
+                        class="text-danger">Last name is required</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel"
+                        name="phoneNumber"
+                        required
+                        pattern="[789][0-9]{9}"
+                        #phoneNumber="ngModel"
+                        [(ngModel)]="data.phoneNumber"
+                        class="form-control" placeholder="Enter Phone Number">
+
+                        
+                    <label *ngIf="form.submitted && phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"
+                        class="text-danger">Please enter a valid phone number</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
