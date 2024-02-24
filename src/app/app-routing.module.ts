@@ -11,6 +11,10 @@ import { PlaceholderdataComponent } from './placeholderdata/placeholderdata.comp
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { RelativeformComponent } from './relativeform/relativeform.component';
 import { EmployeeModule } from './employee/employee.module';
+import { CreateEmpComponent } from './create-emp/create-emp.component';
+import { Common1Component } from './common1/common1.component';
+import { Common2Component } from './common2/common2.component';
+import { BackbuttonComponent } from './backbutton/backbutton.component';
 
 const routes: Routes = [
   { path: 'user', component: UserComponent },
@@ -23,10 +27,14 @@ const routes: Routes = [
   { path:'sampledata', component:PlaceholderdataComponent},
   { path:'template', component:TemplatedrivenComponent},
   { path:'relativeform', component:RelativeformComponent},
- 
+  { path:'createemp', component:CreateEmpComponent},
   { path:'LazyLoading',loadChildren:()=>import('./employee/employee.module').then(m=>m.EmployeeModule)},
 
   //{ path:'',redirectTo:'home',pathMatch:'full'},
+
+  { path:'com1',component:Common1Component},
+  { path:'com2',component:Common2Component},
+  { path:'goback',component:BackbuttonComponent},
 
 
 ];

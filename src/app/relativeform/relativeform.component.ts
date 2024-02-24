@@ -18,7 +18,7 @@ export class RelativeformComponent {
     email: ['', [Validators.required, Validators.email]]
   })
 
-  //
+  //  
   get f()
   {
     return this.registerdata.controls

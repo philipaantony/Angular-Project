@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,7 +6,19 @@ import { Injectable } from '@angular/core';
 })
 export class ServiceExampleService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+
+  postEmployee(data:any)
+  {
+    return this.http.post<any>('http://localhost:5000/api/addemp',data)
+  }
+
+  getallEmployee()
+  {
+    return this.http.get<any>('http://localhost:5000/api/getallemps')
+  }
+
 
   public myarray =[
     {id:1, name:"Kottayam"},

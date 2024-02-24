@@ -17,6 +17,10 @@ import { MyusersComponent } from './myusers/myusers.component';
 import { PlaceholderdataComponent } from './placeholderdata/placeholderdata.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { RelativeformComponent } from './relativeform/relativeform.component';
+import { CreateEmpComponent } from './create-emp/create-emp.component';
+import { Common1Component } from './common1/common1.component';
+import { Common2Component } from './common2/common2.component';
+import { BackbuttonComponent } from './backbutton/backbutton.component';
 
 
 
@@ -32,6 +36,10 @@ import { RelativeformComponent } from './relativeform/relativeform.component';
     PlaceholderdataComponent,
     TemplatedrivenComponent,
     RelativeformComponent,
+    CreateEmpComponent,
+    Common1Component,
+    Common2Component,
+    BackbuttonComponent,
    
 
   ],
