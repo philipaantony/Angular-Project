@@ -12,9 +12,9 @@ export class UserComponent {
   public myname ="Philip Antony"
   public count = 0;
   public wish =""
-  name: string = "";
-  email: string = "";
-  age: string = "";
+  public name ='';
+  public email ='';
+  public age = '';
   fullName: string = ""; 
   
   functionCall(greeting: string)
@@ -34,7 +34,6 @@ export class UserComponent {
 
   // Method to handle form submission
   onSubmit(): void {
-    // Logic to handle form submission goes here
     console.log('Submitted values:', { name: this.name, email: this.email, age: this.age });
   }
 }

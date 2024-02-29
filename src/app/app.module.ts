@@ -21,6 +21,14 @@ import { CreateEmpComponent } from './create-emp/create-emp.component';
 import { Common1Component } from './common1/common1.component';
 import { Common2Component } from './common2/common2.component';
 import { BackbuttonComponent } from './backbutton/backbutton.component';
+import { FooterComponent } from './common-components/footer/footer.component';
+import { AdminComponent } from './guard/admin/admin.component';
+import { HostuserComponent } from './guard/hostuser/hostuser.component';
+import { ParentComponent } from './canActiveChild/parent/parent.component';
+import { Child1Component } from './canActiveChild/child1/child1.component';
+import { Child2Component } from './canActiveChild/child2/child2.component';
+
+
 
 
 
@@ -40,6 +48,14 @@ import { BackbuttonComponent } from './backbutton/backbutton.component';
     Common1Component,
     Common2Component,
     BackbuttonComponent,
+    FooterComponent,
+    AdminComponent,
+    HostuserComponent,
+    ParentComponent,
+    Child1Component,
+    Child2Component,
+ 
+   
    
 
   ],
